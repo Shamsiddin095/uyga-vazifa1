@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matn Tahlili</title>
+  </head>
+  <body>
+    <label for="matnInput">Matn kiriting:</label>
+    <textarea id="matnInput" rows="4" cols="50"></textarea><br />
+
+    <button onclick="tahlil()">Tahlil qilish</button>
+
+    <p id="natija"></p>
+
+    <script>
+      function tahlil() {
+        var matn = document.getElementById("matnInput").value;
+
+        // So'z, harf, unli harf, undosh harf, 'a' harfi, 'b' harfi, katta 'A' harfi, katta 'B' harfi san'ati
+        var sozSanati = matn.split(/\s+/).filter(Boolean).length;
+        var harfSanati = matn.replace(/[^a-zA-ZğüşıöçĞÜŞİÖÇ]/g, "").length;
+        var unliHarfSanati = (matn.match(/[aeiouAEIOU]/g) || []).length;
+        var undoshHarfSanati = harfSanati - unliHarfSanati;
+        var aHarfiSanati = (matn.match(/a/gi) || []).length;
+        var bHarfiSanati = (matn.match(/b/gi) || []).length;
+        var kattaAHarfiSanati = (matn.match(/A/g) || []).length;
+        var kattaBHarfiSanati = (matn.match(/B/g) || []).length;
+
+        var natijaElement = document.getElementById("natija");
+        natijaElement.innerHTML =
+          "Matnda " +
+          sozSanati +
+          " so'z bor.<br>" +
+          "Matnda " +
+          harfSanati +
+          " harf bor.<br>" +
+          "Matnda " +
+          unliHarfSanati +
+          " unli harf bor.<br>" +
+          "Matnda " +
+          undoshHarfSanati +
+          " undosh harf bor.<br>" +
+          "Matnda " +
+          aHarfiSanati +
+          " ta 'a' harfi bor.<br>" +
+          "Matnda " +
+          bHarfiSanati +
+          " ta 'b' harfi bor.<br>" +
+          "Matnda " +
+          kattaAHarfiSanati +
+          " ta katta 'A' harfi bor.<br>" +
+          "Matnda " +
+          kattaBHarfiSanati +
+          " ta katta 'B' harfi bor.";
+      }
+    </script>
+  </body>
+</html>

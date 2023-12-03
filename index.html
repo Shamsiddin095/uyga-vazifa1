@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Matn Tahlili</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <h1>Random&Type</h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="natija-container" id="natijaContainer">
+          <h1>Type your text</h1>
+
+          <!-- Textarea o'rniga input type="text" qo'shing -->
+          <input
+            placeholder="Type your text"
+            id="matnInput"
+            type="text"
+            oninput="tahlil()"
+          /><br />
+        </div>
+
+        <!-- Natijalar -->
+        <div class="container_box">
+          <div class="box">
+            <div class="boxp"><p id="natijaSoz"></p></div>
+            <div class="boxh"><h1>so'zlar</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaHarf"></p></div>
+            <div class="boxh"><h1>Harflar</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaUnliHarf"></p></div>
+            <div class="boxh"><h1>Unli</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaUndoshHarf"></p></div>
+            <div class="boxh"><h1>Undosh</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaAHarf"></p></div>
+            <div class="boxh"><h1>(a) lar</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaBHarf"></p></div>
+            <div class="boxh"><h1>(b) lar</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaKattaAHarf"></p></div>
+            <div class="boxh"><h1>(A) lar</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaKattaBHarf"></p></div>
+            <div class="boxh"><h1>(B) lar</h1></div>
+          </div>
+          <div class="box">
+            <div class="boxp"><p id="natijaIsmSon"></p></div>
+            <div class="boxh"><h1>ismlar soni</h1></div>
+          </div>
+          <div class="boxname">
+            <div class="boxpname">
+              <p id="natijaIsmlar"></p>
+            </div>
+            <div class="boxh">
+              <h1>Ismlar</h1>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
