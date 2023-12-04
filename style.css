@@ -5,138 +5,283 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background: url(./img/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .container {
   max-width: 1920px;
-  height: auto;
-  margin: auto;
-}
-header {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  /* background: white; */
-}
-header h1 {
-  color: white;
+  margin: 20px auto;
 }
 main {
   width: 100%;
-  height: auto;
   margin: auto;
-  padding: 20px;
+  height: 1200px;
+  overflow: scroll;
+  padding-bottom: 100px;
 }
-.type_container {
+header {
   width: 100%;
-  padding: 20px;
-  height: 200px;
-  margin: 10px auto;
+  height: 130px;
+  background: black;
+  color: white;
+  box-shadow: 0 5px 10px grey;
+  display: flex;
+  align-items: center;
 }
-.type_container h1 {
-  text-align: center;
-  font-size: 50px;
-  font-family: monospace;
-  color: rgb(19, 233, 0);
-}
-input {
+
+.search_container {
   width: 100%;
   height: 100px;
-  padding-left: 30px;
-  font-size: 20px;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-}
-.natija {
-  width: 100%;
-  height: auto;
-  margin: 30px auto;
+  padding: 30px;
   display: flex;
-  gap: 80px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: flex-end;
   align-items: center;
-}
-.box {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 120px;
-  box-shadow: 0 5px 10px gray;
-  background: rgb(255, 255, 255);
-}
-.box p {
-  color: rgb(0, 0, 0);
-  padding-top: 100px;
-  font-size: 100px;
-}
-.box h1 {
-  color: rgb(255, 254, 254);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  opacity: 2;
+  position: fixed;
   z-index: 2;
 }
-.boxnames {
-  width: 90%;
-  height: 200px;
-  margin: auto;
+input {
+  position: relative;
+  width: 30%;
+  height: 50px;
+  box-shadow: 0 5px 10px grey;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 18px;
+}
+#search {
+  position: absolute;
+  width: 30px;
+  right: 50px;
+}
+span {
+  color: rgb(229, 5, 5);
+}
+
+.box {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: block;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  box-shadow: 0 5px 10px gray;
-  background: white;
-  margin-top: 30px;
 }
-.boxnames p {
-  padding-top: 20px;
-  font-size: 40px;
-  color: green;
+.title {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title h1 {
+  font-size: 30px;
+}
+#button1 {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background: green;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#button1:hover {
+  background: rgb(13, 169, 52);
+}
+.title img {
+  width: 600px;
+  height: 20%;
+}
+.title p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+.highlight {
+  color: rgb(12, 50, 178);
+}
+.container_test {
+  position: absolute;
+  top: 35%;
+  width: 50%;
+  left: 48%;
+  height: 30%;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+.content {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: 10px solid rgb(109, 107, 107);
+  background: black;
+  padding: 20px 30px;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+#run {
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  right: 10px;
+  bottom: 30px;
+  border: none;
+  outline: none;
+  background: rgb(5, 22, 207);
+  color: rgb(253, 253, 253);
+  font-size: 14px;
+  cursor: pointer;
+}
+#run:hover {
+  background: rgb(176, 156, 156);
+}
+#editableText {
+  /* Ushbu qismga direction va unicode-bidi stilini qo'shing */
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow: auto;
+  color: rgb(250, 250, 250);
+  font-size: 20px;
+}
+
+footer {
+  width: 100%;
+
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+@media screen and (max-width: 968px) {
+  input {
+    width: 40%;
+    height: 30px;
+  }
+  #search {
+    width: 25px;
+    height: 25px;
+  }
+  .title h1 {
+    font-size: 22px;
+  }
+  .title p {
+    font-size: 16px;
+  }
+  .title img {
+    width: 400px;
+  }
+  #button1 {
+    width: 150px;
+    height: 30px;
+  }
+  .container_test {
+    left: 45%;
+    height: 20%;
+  }
+  footer {
+    height: 150px;
+  }
 }
 @media screen and (max-width: 768px) {
-  .boxnames {
-    width: 100%;
-    height: 200px;
-    gap: 20px;
-    margin-top: 40px;
-  }
-  .boxnames p {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .type_container h1 {
-    font-size: 30px;
-  }
-  input {
+  .search_container {
     height: 50px;
   }
-  .type_container {
+  input {
+    width: 50%;
+    height: 30px;
+  }
+  .title h1 {
+    font-size: 22px;
+    max-width: 400px;
+  }
+  .title p {
+    font-size: 16px;
+  }
+  .title img {
+    width: 400px;
+  }
+  .container_test {
+    left: 45%;
+    height: 15%;
+  }
+  #run {
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+    bottom: 5px;
+  }
+  footer {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 568px) {
+  header h1 {
+    font-size: 18px;
+  }
+  input {
+    height: 30px;
+    width: 60%;
+  }
+  .search_container {
+    height: 30x;
+  }
+  .container_test {
+    width: 70%;
+    left: 25%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .container_test {
+    width: 80%;
+    left: 10%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container_test {
+    width: 80%;
+    left: 10%;
+  }
+  .logo {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     height: 100px;
   }
-  .box {
-    margin: auto;
-  }
-  .boxnames {
+  .logo {
     width: 100%;
-    height: 200px;
-    gap: 20px;
-    margin-top: 40px;
+    height: 20px;
   }
-  .boxnames p {
-    font-size: 20px;
+  .search_container {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 368px) {
+  .container_test {
+    width: 90%;
+    left: 10%;
+    top: 40%;
+  }
+  header {
+    flex-direction: column;
   }
 }
