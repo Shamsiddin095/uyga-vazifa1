@@ -241,12 +241,21 @@ footer {
   .container_test {
     width: 70%;
     left: 25%;
+    top: 35%;
+  }
+  #editableText {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 468px) {
   .container_test {
-    width: 80%;
-    left: 10%;
+    width: 90%;
+    left: 20px;
+    top: 30%;
+    height: 20%;
+  }
+  #editableText {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -256,6 +265,9 @@ footer {
   }
   .logo {
     display: none;
+  }
+  #editableText {
+    font-size: 12px;
   }
   header {
     flex-direction: column;
@@ -278,8 +290,9 @@ footer {
 @media screen and (max-width: 368px) {
   .container_test {
     width: 90%;
-    left: 10%;
-    top: 40%;
+    left: 20px;
+    top: 30%;
+    height: 20%;
   }
   header {
     flex-direction: column;
