@@ -1,16 +1,16 @@
 //inputni ishga tushirish
 function search() {
-  var input = document.getElementById("searchInput");
-  var filter = input.value.toUpperCase();
-  var boxes = document.getElementsByClassName("box");
+  let input = document.getElementById("searchInput");
+  let filter = input.value.toUpperCase();
+  let boxes = document.getElementsByClassName("box");
 
-  for (var i = 0; i < boxes.length; i++) {
-    var box = boxes[i];
-    var title = box.querySelector("h1").innerText;
-    var content = box.querySelector("p").innerText;
+  for (let i = 0; i < boxes.length; i++) {
+    let box = boxes[i];
+    let title = box.querySelector("h1").innerText;
+    let content = box.querySelector("p").innerText;
 
-    var titleHighlighted = highlightMatch(title, filter);
-    var contentHighlighted = highlightMatch(content, filter);
+    let titleHighlighted = highlightMatch(title, filter);
+    let contentHighlighted = highlightMatch(content, filter);
 
     box.querySelector("h1").innerHTML = titleHighlighted;
     box.querySelector("p").innerHTML = contentHighlighted;
@@ -27,16 +27,14 @@ function search() {
 }
 
 function highlightMatch(text, filter) {
-  var regex = new RegExp("(" + filter + ")", "ig");
+  let regex = new RegExp("(" + filter + ")", "ig");
   return text.replace(regex, '<span class="highlight">$1</span>');
 }
-
 /// consolega qo'shish
-
 function runFunction() {
   // JavaScript kodini olish
-  var editableTextContent = document.getElementById("editableText");
-  var userInput = editableTextContent.innerText;
+  let editableTextContent = document.getElementById("editableText");
+  let userInput = editableTextContent.innerText;
 
   try {
     // JavaScript kodini ishga tushiramiz
@@ -50,7 +48,7 @@ function runFunction() {
 ///conent none block qilish
 
 function toggleContent(contentId) {
-  var content = document.getElementById(contentId);
+  let content = document.getElementById("content1");
 
   if (content.style.display === "none") {
     content.style.display = "block";
@@ -58,3 +56,7 @@ function toggleContent(contentId) {
     content.style.display = "none";
   }
 }
+//1-length
+// let text = document.getElementById("test1");
+// alert(text.innerText.length);
+// console.log(text.innerText.length);

@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>string medhodlar</title>
+    <title>Input</title>
   </head>
   <body>
     <div class="container">
       <header>
         <div class="logo">
-          <h1>String medhods JS</h1>
+          <h1>Input search</h1>
         </div>
         <div class="search_container">
           <input
@@ -41,41 +41,37 @@
           <div id="editableText" contenteditable="true"></div>
           <button id="run" onclick="runFunction()">Run</button>
         </div>
-        <div class="metod_container">
+        <div class="medhods_container">
           <!--box1---------------------->
           <div class="box">
             <div class="title">
-              <h1 id="test1">Hello JavaScript</h1>
               <h1>1.JavaScript Stringning <span>length</span> Xususiyati</h1>
-              <p>
-                Java scriptda Length uzunlikni aniqlash uchun ishlatiladi misol
-                uchun yuqorida Hello Javascript so'zi yozilgan uni uzunligi
-                qancha deb o'ylaysiz? <br />
-                demak sanab chiqamiz harflar va uni agar orasida bo'sh joy
-                bo'lsa uni ham hisoblaymiz. demak 16 uzunlikga teng ekan keling
-                endi amaliy sinab ko'ramiz. bizda "Hello Javascript" html
-                sahifada test1 degan idga olingan uni biz amaliy ishlatib
-                console yoki alertga chiqarib ko'ramiz. pastdagi
-                <b>sinab ko'ring</b> tugmasiga bosamiz hamda kodni rasmdagidek
-                qilib qora oynaga tushiramiz va qora oyna pastidagi run degan
-                tugmaga bosamiz natija alertga va consolega chiqqanini ko'ramiz.
+              <p id="text">
+                JavaScriptda, matnni ifodalovchi qatorlarda yoki biror
+                o'zgaruvchida saqlab, shu matnning uzunligini aniqlash uchun
+                "length" xususiyati ishlatiladi. Bu xususiyat, matndagi belgilar
+                sonini ifodalovchi bir raqamni qaytaradi. <br />Yuoqorida
+                ko'rsatilgan misolda, "Salom, JavaScript!" matnining uzunligi 19
+                belgidir. "length" xususiyati, bir string obyektida
+                ishlatilganda, ushbu obyektning matni ichidagi belgilar sonini
+                aniqlashda foydalaniladi.
+                <br />
+                <b
+                  >"length" xususiyati, JavaScript string obyektlarida matn
+                  uzunligini ifodalaydi. Bu xususiyat, bir string obyektining
+                  ichidagi belgilar sonini raqam ko'rinishida qaytaradi.</b
+                >
               </p>
 
-              <img src="./img/string metod/1-length.png" alt="img" />
-              <p>
-                <b>Rasmdagi kodning tasnifi</b> <br />
-                Test1 id li documentimizni text degan o'zgaruvchiga olib uni
-                textga o'zlashtirib oldek, va textni length ga tekshirdek.
-              </p>
+              <img src="./img/leight_medhod.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
+                try it now
               </button>
             </div>
           </div>
           <!--box2---------------------->
           <div class="box">
             <div class="title">
-              <h1 id="test2">Hello JavaScript</h1>
               <h1>
                 2.JavaScript Stringning <span>toUpperCase</span> Xususiyati
               </h1>

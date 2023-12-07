@@ -24,6 +24,7 @@ header {
   box-shadow: 0 5px 10px grey;
   display: flex;
   align-items: center;
+  padding-left: 20px;
 }
 
 .search_container {
@@ -62,14 +63,15 @@ span {
   width: 100%;
   display: block;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 .title {
   width: 100%;
   padding: 10px;
   display: flex;
+
   flex-direction: column;
   gap: 20px;
 }
@@ -90,35 +92,31 @@ span {
   background: rgb(13, 169, 52);
 }
 .title img {
-  width: 600px;
-  height: 20%;
+  max-width: 50%;
+  border-radius: 10px;
 }
 .title p {
   color: rgb(0, 0, 0);
   font-size: 20px;
+  max-width: 800px;
 }
 .highlight {
   color: rgb(12, 50, 178);
 }
-.container_test {
-  position: absolute;
-  top: 35%;
-  width: 50%;
-  left: 48%;
-  height: 30%;
-  margin: auto;
-  transition: all 0.5s ease-in-out;
-}
+
 .content {
-  position: absolute;
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 300px;
   border: 10px solid rgb(109, 107, 107);
   background: black;
   padding: 20px 30px;
   transition: all 0.5s ease-in-out;
   transform: scale(1);
+  z-index: 2;
+  position: fixed;
+  right: 20px;
+  top: 30%;
 }
 #run {
   position: absolute;
@@ -152,7 +150,60 @@ span {
   color: rgb(250, 250, 250);
   font-size: 20px;
 }
+.container_links {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+.link1 {
+  width: 25%;
+  text-align: center;
+  height: 40px;
+  box-shadow: 0 5px 10px grey;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+.link2 {
+  width: 20%;
+  text-align: center;
+  height: 40px;
+  box-shadow: 0 5px 10px grey;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+.link3 {
+  width: 15%;
+  text-align: center;
+  height: 40px;
+  box-shadow: 0 5px 10px grey;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+.link1:hover {
+  width: 30%;
+}
 
+.link2:hover {
+  width: 32%;
+}
+.link3:hover {
+  width: 34%;
+}
+.link1,
+.link2,
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+}
 footer {
   width: 100%;
 
@@ -166,135 +217,53 @@ footer {
 }
 
 @media screen and (max-width: 968px) {
-  input {
-    width: 40%;
-    height: 30px;
-  }
-  #search {
-    width: 25px;
-    height: 25px;
-  }
-  .title h1 {
-    font-size: 22px;
-  }
-  .title p {
-    font-size: 16px;
-  }
-  .title img {
-    width: 400px;
-  }
-  #button1 {
-    width: 150px;
-    height: 30px;
-  }
-  .container_test {
-    left: 45%;
-    height: 20%;
-  }
-  footer {
-    height: 150px;
+  .content {
+    height: 250px;
   }
 }
 @media screen and (max-width: 768px) {
-  .search_container {
-    height: 50px;
-  }
-  input {
-    width: 50%;
-    height: 30px;
-  }
-  .title h1 {
-    font-size: 22px;
-    max-width: 400px;
-  }
-  .title p {
-    font-size: 16px;
+  .content {
+    height: 200px;
+    top: 20%;
+    width: 90%;
+    margin: auto;
   }
   .title img {
-    width: 400px;
-  }
-  .container_test {
-    left: 45%;
-    height: 15%;
-  }
-  #run {
-    width: 80px;
-    height: 20px;
-    font-size: 12px;
-    bottom: 5px;
-  }
-  footer {
-    height: 150px;
+    max-width: 90%;
   }
 }
-@media screen and (max-width: 568px) {
-  header h1 {
-    font-size: 18px;
-  }
-  input {
-    height: 30px;
-    width: 60%;
-  }
-  .search_container {
-    height: 30x;
-  }
-  .container_test {
-    width: 70%;
-    left: 25%;
-    top: 35%;
-  }
-  #editableText {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 468px) {
-  .container_test {
+@media screen and (max-width: 595px) {
+  .content {
+    height: 200px;
+    top: 40%;
     width: 90%;
-    left: 20px;
-    top: 30%;
-    height: 20%;
-  }
-  #editableText {
-    font-size: 12px;
+    margin: auto;
   }
 }
-@media screen and (max-width: 400px) {
-  .container_test {
-    width: 80%;
-    left: 10%;
+@media screen and (max-width: 498px) {
+  .content {
+    height: 150px;
+    top: 50%;
+    width: 90%;
+    margin: auto;
   }
-  .logo {
-    display: none;
+  .title img {
+    max-width: 100%;
   }
-  #editableText {
-    font-size: 12px;
+}
+
+@media screen and (max-width: 394px) {
+  .content {
+    height: 150px;
+    top: 55%;
+    width: 90%;
+    margin: auto;
   }
-  header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  .title img {
+    max-width: 100%;
     height: 100px;
   }
-  .logo {
-    width: 100%;
-    height: 20px;
-  }
-  .search_container {
-    width: 100%;
-  }
-  input {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 368px) {
-  .container_test {
-    width: 90%;
-    left: 20px;
-    top: 30%;
-    height: 20%;
-  }
-  header {
-    flex-direction: column;
+  .box {
+    padding: 0px;
   }
 }
