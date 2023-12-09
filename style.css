@@ -55,7 +55,7 @@ input {
   right: 50px;
 }
 span {
-  color: rgb(2, 2, 2);
+  color: rgb(45, 157, 94);
 }
 
 .box {
@@ -71,7 +71,7 @@ span {
   width: 100%;
   padding: 10px;
   display: flex;
-
+  text-align: justify;
   flex-direction: column;
   gap: 20px;
 }
@@ -82,7 +82,7 @@ span {
   width: 200px;
   height: 50px;
   border: none;
-  background: green;
+  background: rgb(24, 97, 4);
   color: white;
   font-size: 16px;
   border-radius: 5px;
@@ -199,7 +199,8 @@ span {
 .link1:hover {
   width: 45%;
 }
-
+#col1 {
+}
 .link2:hover {
   width: 45%;
 }
@@ -230,7 +231,7 @@ footer {
   color: white;
   padding: 20px;
 }
-
+/*medeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 @media screen and (max-width: 968px) {
   .content {
     height: 250px;
@@ -317,10 +318,11 @@ footer {
     top: 45%;
   }
   #editableText {
-    font-size: 14px;
+    font-size: 12px;
   }
   #run {
     width: 20%;
+    bottom: -30px;
   }
   .title h1 {
     font-size: 20px;
@@ -378,10 +380,15 @@ footer {
   .content {
     height: 150px;
     top: 50%;
-    width: 100%;
+    width: 99%;
     margin: auto;
     padding: 10px 10px;
-    right: 0;
+    right: 2px;
+    opacity: 0.7;
+    padding: 2px 2px;
+  }
+  #editableText {
+    font-size: 10px;
   }
   .title img {
     max-width: 100%;
