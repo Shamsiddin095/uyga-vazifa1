@@ -8,10 +8,29 @@
     <title>string medhodlar</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container_all">
       <header>
         <div class="logo">
           <h1>String medhods JS</h1>
+        </div>
+        <div class="container_links">
+          <div id="col1" class="link1">
+            <a href="./index.html">String methods</a>
+          </div>
+          <div class="link2">
+            <a href="./numberm.html">Nubmer medhods</a>
+          </div>
+          <div class="link3">
+            <a href="input.html">About Use</a>
+          </div>
+        </div>
+      </header>
+
+      <hr />
+      <main>
+        <div class="content" id="content1">
+          <div id="editableText" contenteditable="true"></div>
+          <button id="run" onclick="runFunction()">Run code</button>
         </div>
         <div class="search_container">
           <input
@@ -20,38 +39,19 @@
             placeholder="Search..."
             oninput="search()"
           />
-          <img id="search" src="./img/search.png" alt="img" />
+          <img id="searchimg" src="./img/search.png" alt="img" />
         </div>
-      </header>
-
-      <main>
-        <div class="container_links">
-          <div id="col1" class="link1">
-            <a href="./index.html">String metod >></a>
-          </div>
-          <div class="link2">
-            <a href="./numberm.html">Nubmer medhods >></a>
-          </div>
-          <div class="link3">
-            <a href="input.html">Input search >></a>
-          </div>
-        </div>
-        <hr />
-        <div class="content" id="content1">
-          <div id="editableText" contenteditable="true"></div>
-          <button id="run" onclick="runFunction()">Run</button>
-        </div>
-        <div class="metod_container">
+        <div class="container">
           <!--box1---------------------->
           <div class="box">
             <div class="title">
-              <h1>1.JavaScript Stringning <span>length</span> Xususiyati</h1>
+              <h1>length</h1>
               <p>
                 Java scriptda Length uzunlikni aniqlash uchun ishlatiladi misol
                 uchun yuqorida Hello Javascript so'zi yozilgan uni uzunligi
                 qancha deb o'ylaysiz? <br />
                 demak sanab chiqamiz harflar va uni agar orasida bo'sh joy
-                bo'lsa uni ham hisoblaymiz. demak 16 uzunlikga teng ekan keling
+                bo'lsa uni ham hisoblaymiz. demak 15 uzunlikga teng ekan keling
                 endi amaliy sinab ko'ramiz. bizda "Hello Javascript" html
                 sahifada test1 degan idga olingan uni biz amaliy ishlatib
                 console yoki alertga chiqarib ko'ramiz. pastdagi
@@ -59,7 +59,7 @@
                 qilib qora oynaga tushiramiz va qora oyna pastidagi run degan
                 tugmaga bosamiz natija alertga va consolega chiqqanini ko'ramiz.
               </p>
-              <h1 id="toleng">Salom Javascript</h1>
+              <h3 id="toleng">Salom Javascript</h3>
               <img src="./img/string metod/1-length.png" alt="img" />
               <p>
                 <b>Rasmdagi kodning tasnifi</b> <br />
@@ -67,16 +67,14 @@
                 textga o'zlashtirib oldek, va textni length ga tekshirdek.
               </p>
               <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
+                Try it now
               </button>
             </div>
           </div>
           <!--box2---------------------->
           <div class="box">
             <div class="title">
-              <h1>
-                2.JavaScript Stringning <span>toUpperCase</span> Xususiyati
-              </h1>
+              <h1>toUpperCase</h1>
               <p>
                 Yuqoridagi misolda, "salom, JavaScript!" matni bor. Keyin
                 "toUpperCase" xususiyati orqali bu matn katta harflarga
@@ -85,7 +83,7 @@
                 sinab ko'ring tugmaga bosib qora oynaga pastdagi rasmdagi kodni
                 kiritib sinab ko'ring
               </p>
-              <h1 id="toUpper">Salom Javascript</h1>
+              <h3 id="toUpper">Salom Javascript</h3>
               <img src="./img/string metod/2-toUpperCase.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -95,16 +93,14 @@
           <!--box3---------------------->
           <div class="box">
             <div class="title">
-              <h1>
-                3.JavaScript Stringning <span>toLowerCase</span> Xususiyati
-              </h1>
+              <h1>toLowerCase</h1>
               <p>
                 Yuqoridagi misolda, "Salom, JavaScript!" matni bor. Keyin
                 toLowerCase xususiyati orqali bu matn kichik harflarga
                 o'tkaziladi. Shunday qilib, "Salom, JavaScript!" matni "salom,
                 javascript!" ga o'tkaziladi.
               </p>
-              <h1 id="toLower">SALOM JAVASCRIPT</h1>
+              <h3 id="toLower">SALOM JAVASCRIPT</h3>
               <img src="./img/string metod/3-toLowerCase.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 try it now
@@ -114,7 +110,7 @@
           <!--box4---------------------->
           <div class="box">
             <div class="title">
-              <h1>4.JavaScript Stringning <span>charAt</span> Xususiyati</h1>
+              <h1>charAt</h1>
               <p>
                 charAt xususiyati, string obyektlarida ishlatiladi va matn
                 ichidagi belgilar orqali berilgan indeksdagi harfin qiymatini
@@ -124,7 +120,7 @@
                 olinadi. Shunday qilib, "Salom, JavaScript!" matnining birinchi
                 harfi "S" ga o'tadi.
               </p>
-              <h1 id="charAt">Salom Javascript</h1>
+              <h3 id="charAt">Salom Javascript</h3>
               <img src="./img/string metod/4-charAt.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -134,17 +130,18 @@
           <!--box5---------------------->
           <div class="box">
             <div class="title">
-              <h1>5.JavaScript Stringning <span>indexOf</span> Xususiyati</h1>
+              <h1>indexOf</h1>
               <p>
                 indexOf xususiyati, string obyektlarida matndagi berilgan
                 submatnning birinchi indeksini topish uchun foydalaniladi. Agar
-                submatn matnda mavjud bo'lmasa, indexOf -1 ni qaytaradi. <br />
+                submatn matnda mavjud bo'lmasa, indexOf -1 ni qaytaradi.
+                <br />
                 Yuqoridagi misolda, "Salom, JavaScript!" matni bor. indexOf
                 xususiyati orqali bu matndagi "JavaScript" submatnning birinchi
                 indeksi olinadi. Shunday qilib, "Salom, JavaScript!" matni
                 ichida "JavaScript" submatni boshlang'ich indeksi 7 ga teng.
               </p>
-              <h1 id="indexOf">Salom Javascript</h1>
+              <h3 id="indexOf">Salom Javascript</h3>
               <img src="./img/string metod/5-indexOf.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -154,7 +151,7 @@
           <!--box6---------------------->
           <div class="box">
             <div class="title">
-              <h1>6.JavaScript Stringning <span>substring</span> Xususiyati</h1>
+              <h1>substring</h1>
               <p>
                 substring xususiyati, string obyektlarida berilgan start va end
                 indekslar orqali matndagi qismini olish uchun foydalaniladi.
@@ -167,7 +164,7 @@
                 qisqacha matnda "Java" bo'lib chiqadi. <br />matnni boshidan
                 qirqib olish (0 dan 2 gacha .....)
               </p>
-              <h1 id="substring">Salom Javascript</h1>
+              <h3 id="substring">Salom Javascript</h3>
               <img src="./img/string metod/6-substring.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -177,7 +174,7 @@
           <!--box7---------------------->
           <div class="box">
             <div class="title">
-              <h1>7. JavaScript Stringning <span>slice</span> Xususiyat</h1>
+              <h1>slice</h1>
               <p>
                 slice xususiyati, string obyektlarida berilgan start va end
                 indekslar orqali matndagi qismini olish uchun foydalaniladi.
@@ -191,7 +188,7 @@
                 qisqacha matnda "Java" bo'lib chiqadi. <br />
                 matnni orqadan qirqib keladi. ()
               </p>
-              <h1 id="slice">Salom Javascript</h1>
+              <h3 id="slice">Salom Javascript</h3>
               <img src="img/string metod/7-slice.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -201,7 +198,7 @@
           <!--box8---------------------->
           <div class="box">
             <div class="title">
-              <h1>8. JavaScript Stringning <span>replace</span> Xususiyati</h1>
+              <h1>replace</h1>
               <p>
                 replace xususiyati, string obyektlarida belgilangan matn qismini
                 boshqa matn bilan almashtirish uchun ishlatiladi. Bu xususiyat
@@ -212,7 +209,7 @@
                 bilan almashtiramiz. Shunday qilib, "Salom, JavaScript!" matni
                 "Salom, Dunyo!" ga o'zgaradi.
               </p>
-              <h1 id="replace">Salom Javascript</h1>
+              <h3 id="replace">Salom Javascript</h3>
               <img src="./img/string metod/8-replace.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -222,18 +219,19 @@
           <!--box9---------------------->
           <div class="box">
             <div class="title">
-              <h1>9.JavaScript Stringning <span>split </span> Xususiyati</h1>
+              <h1>split</h1>
               <p>
                 split xususiyati, string obyektlarida belgilangan separator
                 bo'yicha matnni bo'lib massivga ajratishda foydalaniladi. Ushbu
                 xususiyat orqali matnni separator bilan ajratgan bo'lib, bu
-                separatorlarni o'z ichiga olmayan massiv qaytariladi. <br />
+                separatorlarni o'z ichiga olmayan massiv qaytariladi.
+                <br />
                 Pastdagi misolda, "Salom, JavaScript!" matni bor. split
                 xususiyati orqali bu matnni ", " separator bo'yicha ajratamiz.
                 Shunday qilib, "Salom, JavaScript!" matni ["Salom",
                 "JavaScript!"] massivga aylanadi.
               </p>
-              <h1 id="split">Salom Javascript</h1>
+              <h3 id="split">Salom Javascript</h3>
               <img src="./img/string metod/9-split.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -244,10 +242,7 @@
           <div class="box">
             <div class="title">
               <h1 id="matn2">.Hush kelibsiz!</h1>
-              <h1>
-                10.JavaScript Stringning
-                <span>concat</span> Xususiyati
-              </h1>
+              <h1>concat</h1>
               <p>
                 concat xususiyati, bir nechta stringni bitta stringga qo'shish
                 uchun foydalaniladi. Ushbu xususiyat o'z ichiga olingan
@@ -258,7 +253,7 @@
                 natijasida yangi bir matn hosil bo'ladi. Shunday qilib, yangi
                 matn "Salom, JavaScript!" ga o'zgaradi.
               </p>
-              <h1 id="matn1">Javascriptga</h1>
+              <h3 id="matn1">Javascriptga</h3>
 
               <img src="./img/string metod/10-concat.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
@@ -269,7 +264,7 @@
           <!--box11---------------------->
           <div class="box">
             <div class="title">
-              <h1>11.JavaScript Stringning <span>match</span> Xususiyati</h1>
+              <h1>match</h1>
               <p id="matn">
                 match xususiyati, bir stringni berilgan regular ifoda (regexp)
                 ve (regex) boyicha qidirish uchun ishlatiladi. Bu xususiyat matn
@@ -284,7 +279,7 @@
                 o'xshaydi.pastdagi misolni tekshirib ko'ring ushbu matnda nechta
                 javascript so'zi ishlatilgan
               </p>
-              <h1 id="natija"></h1>
+              <h3 id="natija"></h3>
               <img src="./img/string metod/11-match.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -295,14 +290,14 @@
           <!--box12---------------------->
           <div class="box">
             <div class="title">
-              <h1>12.JavaScript Stringning <span>repeat</span> Xususiyati</h1>
+              <h1>repeat</h1>
               <p>
                 repeat xususiyati, bir matnni berilgan sanaga ko'p marta
                 takrorlash uchun foydalaniladi. Bu xususiyat o'z ichiga olingan
                 matnni berilgan sanaga qadar qaytaradi. <br />
                 bu misolda java so'zi 3 marta takrorlanadi
               </p>
-              <h1 id="repeat">java</h1>
+              <h3 id="repeat">java</h3>
               <img src="img/string metod/12-repeat.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
@@ -313,18 +308,21 @@
           <!--box13---------------------->
           <div class="box">
             <div class="title">
-              <h1>13.JavaScript Stringning <span>search</span> Xususiyati</h1>
-              <p>
+              <h1>search</h1>
+              <p id="srch">
                 search xususiyati, string obyektlarida berilgan regular ifodani
-                (regexp) qidirib topish uchun foydalaniladi. Agar topilgan
-                bo'lsa, eng birinchi topilgan indeksni qaytaradi. Aks holda, -1
-                ni qaytaradi. <br />
+                (regexp) qidirib topish uchun foydalaniladi. "meni top men
+                110-indexdan boshlanaman". Agar topilgan bo'lsa, eng birinchi
+                topilgan indeksni qaytaradi. Aks holda, -1 ni qaytaradi.
                 Pastdagi misolda, search xususiyati orqali "Java" so'zi matn
                 ichida qidiriladi. Agar topilgan bo'lsa, eng birinchi topilgan
                 indeksi qaytaradi. Shunday qilib, "Salom, JavaScript!" matni
-                ichida "Java" so'zi "7" indeksdan boshlanadi.
+                ichida manashu "Java" so'zi "7" indeksdan boshlanadi.Endi keling
+                shu matn ichida java so'zi qaysi indexdan boshlanadi pastdagi
+                misolni ishlab tekshirib ko'ramiz.
               </p>
-              <img src="./img/search medhod.png" alt="img" />
+              <h3 id="quti"></h3>
+              <img src="./img/string metod/13-search.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -333,17 +331,19 @@
           <!--box14---------------------->
           <div class="box">
             <div class="title">
-              <h1>14.JavaScript Stringning <span>trim</span> Xususiyati</h1>
+              <h1>trim</h1>
               <p>
                 trim xususiyati, string obyektlaridagi matndagi bosh joylarni
                 olib tashlash uchun foydalaniladi. Bu xususiyat o'z ichiga olgan
                 matndan chap va o'ng tomondagi bo'sh joylarni olib tashlab,
-                yangi bir string qaytaradi. <br />
-                pastdagi misolda, trim xususiyati orqali " Salom, JavaScript! "
-                matnidagi bosh joylar olib tashlanadi. Natijada yangi matn
-                "Salom, JavaScript!" ga o'zgaradi.
+                yangi bir string qaytaradi. pastdagi misolda, trim xususiyati
+                orqali
+                <b>" Salom, JavaScript! "</b> matnidagi bosh joylar olib
+                tashlanadi. Natijada yangi matn "Salom, JavaScript!" ga
+                o'zgaradi.
               </p>
-              <img src="./img/trim medhod.png" alt="img" />
+              <h3 id="trim"></h3>
+              <img src="./img/string metod/14-trim.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -352,7 +352,7 @@
           <!--box15---------------------->
           <div class="box">
             <div class="title">
-              <h1>15.JavaScript Stringning <span>padEnd</span> Xususiyati</h1>
+              <h1>padEnd</h1>
               <p>
                 padEnd xususiyati, string obyektlaridagi matnni belgilangan
                 hajmga yettirish uchun belgilangan belgini matnning oxiriga
@@ -363,7 +363,8 @@
                 belgilangan hajmga (10) yettiriladi va oxiriga "!"" belgisi
                 qo'shiladi. Natijada yangi matn "Salom!!!!!" ga o'zgaradi.
               </p>
-              <img src="./img/padEnd maedhod.png" alt="img" />
+              <h3 id="padEnd">salom</h3>
+              <img src="./img/string metod/15-padEnd.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -372,7 +373,7 @@
           <!--box16---------------------->
           <div class="box">
             <div class="title">
-              <h1>16.JavaScript Stringning <span>padStart</span> Xususiyati</h1>
+              <h1>padStart</h1>
               <p>
                 padStart xususiyati, string obyektlaridagi matnni belgilangan
                 hajmga yettirish uchun belgilangan belgini matnning boshiga
@@ -383,7 +384,8 @@
                 belgilangan hajmga (10) yettiriladi va boshiga "!"" belgisi
                 qo'shiladi. Natijada yangi matn "!!!!Salom" ga o'zgaradi.
               </p>
-              <img src="./img/padSart medhod.png" alt="img" />
+              <h3 id="padStart">salom</h3>
+              <img src="./img/string metod/16-padStart.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -392,13 +394,17 @@
           <!--box17---------------------->
           <div class="box">
             <div class="title">
-              <h1>17.JavaScript Stringning <span>includes</span> Xususiyati</h1>
-              <p>
-                includes xususiyati, string obyektlarida berilgan searchString
-                ni qidirib topish uchun foydalaniladi. Agar searchString matnda
-                topilsa, true qaytariladi; aks holda, false qaytariladi.
+              <h1>includes</h1>
+              <p id="includes">
+                includes xususiyati,jav string obyektlarida berilgan
+                searchString ni qidirib topish uchun foydalaniladi. Agar
+                searchString matnda topilsa, true qaytariladi; aks holda, false
+                qaytariladi.keling indi yuqorida jav so'zi adashib kirib
+                qolganini tekshiramiz. Agar mavjud bo'lsa true chiqadi aksi
+                bo'lsa false
               </p>
-              <img src="./img/includes medhod.png" alt="img" />
+
+              <img src="./img//string metod/17-includes.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -407,17 +413,16 @@
           <!--box18---------------------->
           <div class="box">
             <div class="title">
-              <h1>18.JavaScript Stringning <span>endsWith</span> Xususiyati</h1>
-              <p>
+              <h1>endsWith</h1>
+              <p id="endsWith">
                 endsWith xususiyati, string obyektlaridagi matnning oxiriga
                 belgilangan searchString ni qidirib topish uchun foydalaniladi.
                 Agar matn belgilangan so'z bilan tugasa, true qaytariladi; aks
-                holda, false qaytariladi. <br />
-                Pastdagi misolda, endsWith xususiyati orqali "Salom,
-                JavaScript!" matni ichida "JavaScript" so'zi oxirida turib,
-                natijada true qaytariladi.
+                holda, false qaytariladi. Pastdagi misolda, endsWith xususiyati
+                orqali "Salom, JavaScript!" matni ichida "JavaScript" so'zi
+                oxirida turib, natijada true qaytariladi end.
               </p>
-              <img src="./img/endswith medhod.png" alt="img" />
+              <img src="./img/string metod/18-endsWith.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -426,10 +431,8 @@
           <!--box19---------------------->
           <div class="box">
             <div class="title">
-              <h1>
-                19.JavaScript Stringning <span>startsWith</span> Xususiyati
-              </h1>
-              <p>
+              <h1>startsWith</h1>
+              <p id="startsWith">
                 startsWith xususiyati, string obyektlaridagi matnning boshiga
                 belgilangan searchString ni qidirib topish uchun foydalaniladi.
                 Agar matn belgilangan so'z bilan boshlanib bo'lsa, true
@@ -438,7 +441,7 @@
                 JavaScript!" matni ichida "Salom" so'zi boshidan boshlanadi,
                 natijada true qaytariladi.
               </p>
-              <img src="./img/startswith medhod.png" alt="img" />
+              <img src="./img/string metod/19-startsWith.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -447,22 +450,17 @@
           <!--box20---------------------->
           <div class="box">
             <div class="title">
-              <h1>
-                20.JavaScript Stringning <span>localeCompare</span> Xususiyati
-              </h1>
-              <p>
-                localeCompare xususiyati, string obyektlaridagi matnni boshqa
-                bir matn bilan solishtirib, ularning alfabit tartibida
+              <h1>localeCompare</h1>
+              <p id="localeCompare">
+                localeCompare xususiyati,Hoshimbek string obyektlaridagi matnni
+                boshqa bir matn bilan solishtirib, ularning alfabit tartibida
                 joylashganligini aniqlash uchun foydalaniladi. Agar birinchi
-                matn ikkinchi matndan oldin kelgan bo'lsa, -1 qaytariladi; agar
-                ikkala matn bir xil bo'lsa, 0 qaytariladi; aks holda, 1
-                qaytariladi.
-                <br />
-                Pastdagi misolda, localeCompare xususiyati orqali "apple" va
-                "banana" matnlari solishtiriladi. Natijada "apple" so'zi
-                "banana" so'zidan oldin kelganligi uchun -1 qaytariladi.
+                matn ikkinchi matndan oldin kelgan bo'lsa, Bahtiyor -1
+                qaytariladi; agar ikkala matn bir xil bo'lsa, 0 qaytariladi; aks
+                holda, 1 qaytariladi.
               </p>
-              <img src="./img/localCompare medghod.png" alt="img" />
+              <h3 id="localnatija"></h3>
+              <img src="./img/string metod/20-localeCompare.png" alt="img" />
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -472,21 +470,20 @@
           <!--box21---------------------->
           <div class="box">
             <div class="title">
-              <h1>21.Medhod <span>toString</span></h1>
+              <h1>toString</h1>
               <p>
                 toString JavaScriptning obyekt metodlari orasida umumiy va
                 umumiy ma'lumotlarni matnga o'tkazish uchun ishlatiladi. Bu
                 metod, bir obyektni matn ko'rinishiga o'tkazadi. String, array,
-                number, va boshqa obyektlar uchun ishlatiladi. <br />
-                pastdagi misolda, toString metodini ishlatib, sonni matn
-                ko'rinishiga o'tkazdik. Natijada, "42" matni hosil bo'ldi.
+                number, va boshqa obyektlar uchun ishlatiladi. pastdagi misolda,
+                toString metodini ishlatib, sonni matn ko'rinishiga o'tkazdik.
+                Natijada, "42" matni hosil bo'ldi. endi pastdagi kodni ishlatib
+                42 matnni numberga o'tkazib ko'ring
               </p>
-              <img src="./img/tostring1 medhod.png" alt="img" />
-              <p>
-                Bu misolda, arrayni toString metodi orqali matn ko'rinishiga
-                o'tkazdik va natijada "1,2,3" matni hosil bo'ldi.
-              </p>
-              <img src="./img/tostring2 medhod.png" alt="img" />
+              <h3 id="toString">42</h3>
+
+              <img src="./img/string metod/21-toStrinng.png" alt="img" />
+
               <button id="button1" onclick="toggleContent('content1')">
                 Sinab ko'ring
               </button>
@@ -495,14 +492,15 @@
 
           <!--close box-->
         </div>
-        <!--end-->
       </main>
+
       <footer>
         <div class="div">
           <h1>&copy; copyright</h1>
         </div>
       </footer>
     </div>
+
     <script src="./main.js"></script>
   </body>
 </html>

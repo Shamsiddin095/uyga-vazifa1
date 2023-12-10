@@ -1,38 +1,50 @@
 // Foydalanuvchi kiritishini qidiruv funksiyasi
 function search() {
-  // Input elementini tanlash
-  let input = document.getElementById("searchInput");
-  // Foydalanuvchi kiritishini katta harflarga aylantirish
-  let filter = input.value.toUpperCase();
-  // Barcha "box" elementlarini tanlash
-  let boxes = document.getElementsByClassName("box");
+  // Qidirish inputining qiymatini olish
+  var searchInput = document.getElementById("searchInput").value.toLowerCase();
 
-  // Har bir "box" uchun qidiruvni bajarish
-  for (let i = 0; i < boxes.length; i++) {
-    // Joriy "box"ni tanlash
-    let box = boxes[i];
-    // "box" ichidagi sarlavhani va matnni tanlash
-    let title = box.querySelector("h1").innerText;
-    let content = box.querySelector("p").innerText;
+  // Barcha box elementlarini olish
+  var boxes = document.querySelectorAll(".box");
 
-    // Sarlavhaga qidiruvni qo'shish
-    let titleHighlighted = highlightMatch(title, filter);
-    // Matnga qidiruvni qo'shish
-    let contentHighlighted = highlightMatch(content, filter);
+  // Container elementini olish
+  var container = document.querySelector(".container");
 
-    // Yangi sarlavhani va matnni "box"ga qo'yish
-    box.querySelector("h1").innerHTML = titleHighlighted;
-    box.querySelector("p").innerHTML = contentHighlighted;
+  // Qidirish inputi bo'shmi yoki yo'qmi tekshirish
+  if (searchInput === "") {
+    // Agar bo'sh bo'lsa, barcha boxlarni pastga tushib ketish
+    boxes.forEach(function (box, index) {
+      container.appendChild(box);
+    });
+  } else {
+    // Agar bo'sh bo'lmasa, qidirish natijalariga ko'ra tartibni yangilash
+    boxes.forEach(function (box, index) {
+      // Joriy boxning matnini olish
+      var boxText = box.textContent.toLowerCase();
 
-    // Agar sarlavhada yoki matnda <span> bo'lsa, "box"ni ko'rsatish
-    if (
-      titleHighlighted.includes("<span") ||
-      contentHighlighted.includes("<span")
-    ) {
-      box.style.display = "block";
+      // Agar qidirish inputi matnda paydo bo'lsa
+      if (boxText.includes(searchInput)) {
+        // Qidirilgan boxni yuqoriga o'tkazish, agar box yuqoriga chiqqanidan oldinmas
+        if (container.firstChild !== box) {
+          container.insertBefore(box, container.firstChild);
+        }
+      }
+    });
+
+    // Qolgan boxlarni ham tartibini saqlab qo'yish
+    var remainingBoxes = Array.from(boxes).filter(function (box) {
+      return !container.contains(box);
+    });
+
+    // Agar qidirilgan element pastga tushib ketsa, o'zi o'zini yangi joyiga qaytariladi
+    if (remainingBoxes.length === boxes.length - 1) {
+      container.insertBefore(
+        remainingBoxes[0],
+        container.lastChild.nextSibling
+      );
     } else {
-      // Aks holda "box"ni yashirish
-      box.style.display = "none";
+      remainingBoxes.forEach(function (remainingBox) {
+        container.appendChild(remainingBox);
+      });
     }
   }
 }
@@ -57,16 +69,8 @@ function runFunction() {
   // JavaScript kodini olish
   let editableTextContent = document.getElementById("editableText");
   let userInput = editableTextContent.innerText;
-  let matn2 = document.getElementById("matn2");
-  let matn1 = document.getElementById("matn1");
-  let natija = document.getElementById("natija");
 
   try {
-    // JavaScript kodini ishga tushiramiz
-    matn2.style.display = "none";
-    matn1.style.color = "green";
-    natija.style.color = "blue";
-
     eval(userInput);
   } catch (error) {
     // Xatolarni konsolga chiqaramiz
@@ -161,3 +165,116 @@ function toggleContent(contentId) {
 // let text = document.getElementById("repeat");
 // let natija = text.innerText.repeat(3);
 // text.innerText = natija;
+
+//13 - search
+
+// let text = document.getElementById("srch");
+// let natijaqutisi = document.getElementById("quti");
+
+// let natija = text.innerText.search(/meni top/);
+
+// natijaqutisi.innerText = natija !== -1 ? natija.toString() : "Natija topilmadi";
+
+//14 trim
+
+// let textjoin = document.getElementById("trim");
+// let text = "     salom script    ";
+// let natija = text.trim();
+// textjoin.innerText = natija;
+
+//15 padEnd
+
+// let text = document.getElementById("padEnd");
+
+// let natija = text.innerText.padEnd(10, "!");
+
+// text.innerText = natija;
+
+//16 padStart
+
+// let text = document.getElementById("padStart");
+
+// let natija = text.innerText.padStart(10, "!");
+
+// text.innerText = natija;
+
+//17 - includes
+
+// let text = document.getElementById("includes");
+// let natija = text.innerText.includes("jav");
+// text.innerText = natija;
+
+//18-endsWith
+// let matn = document.getElementById("endsWith");
+// let text = matn.innerText.trim(); // Matndan bo'sh joylarni olib tashlash
+// let natija = text.endsWith("end.");
+
+// matn.innerText = natija;
+
+//19-startsWith
+// let matn = document.getElementById("startsWith");
+// let text = matn.innerText.trim();
+// let natija = text.startsWith("startsWith");
+// matn.innerText = natija;
+
+//20 -localeCompare
+
+// let paragraph = document.getElementById("localeCompare");
+// let resultElement = document.getElementById("localnatija");
+// let text = paragraph.innerText.trim();
+// let searchString1 = "Bahtiyor";
+// let searchString2 = "Hoshimbek";
+// let result = text.localeCompare(searchString2);
+// resultElement.innerText = result;
+
+//21 -toString
+// let h1element = document.getElementById("toString");
+
+// let text = h1element.innerText;
+// let numqiymat = parseFloat(text);
+
+// console.log(typeof numqiymat + " " + numqiymat);
+// console.log(isFinite(numqiymat));
+
+// h1element.innerText = numqiymat;
+
+// number methods /////////////////////////////////////
+
+// 1- MAX-VALUE , MIN-VALUE
+
+// const h1Element = document.getElementById("value");
+// const numbers = h1Element.innerText.match(/\b\d+(\.\d+)?\b/g);
+// const maxNumber = Math.max(...numbers);
+// const minNumber = Math.min(...numbers);
+
+// const kattasiP = document.getElementById("kattasi");
+// const kichigiP = document.getElementById("kichigi");
+
+// kattasiP.innerText = `kattasi = ${maxNumber}`;
+// kichigiP.innerText = `kichigi = ${minNumber}`;
+
+//2- isFinite
+
+// const h1Element = document.getElementById("son");
+// const sonMatn = h1Element.innerText;
+// const sonRaqam = parseFloat(sonMatn);
+// console.log(typeof sonRaqam);
+// const natija = isFinite(sonRaqam);
+// console.log(isfinite);
+// const quti = document.getElementById("isfinite");
+// quti.innerText = `natija = ${natija}`;
+
+//3-isInteger
+
+// const h1Element = document.getElementById("sonInteger");
+// const matn = h1Element.innerText;
+
+// // Matndan faqat raqamlarni ajratib olish
+// const raqam = matn.match(/\b\d+/);
+// const son = parseInt(raqam[0]);
+// let int = Number.isInteger(son);
+
+// let natija = document.getElementById("isInteger");
+
+// natija.innerText = `natija =  ${int}`;
+// console.log(`${son}  ${int}`);
