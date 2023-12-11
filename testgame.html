@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first game</title>
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="buttons">
+            <button class="btn again">Again!</button>
+            <button class="btn uzbek" id="btnuz"></button>
+            <button class="btn eng" id="btneng"></button>
+          </div>
+          <p class="between">(Between 1 and 20)</p>
+        </div>
+      </nav>
+      <div class="middle">
+        <h1>Guess My Number!</h1>
+        <div class="number guess_num">
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/1n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/2n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/3n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/4n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/5n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/6n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/7n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/8n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/9n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/10n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/11n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/12n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/13n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/14n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/15n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/16n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/17n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/18n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/19n-removebg-preview.png"
+            alt="img"
+          />
+          <img
+            id="imgnum"
+            class="numemages"
+            src="./img/gamenum/20n-removebg-preview.png"
+            alt="img"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="left">
+          <input type="number" class="guess" />
+          <button class="btn check">Check!</button>
+        </section>
+        <section class="right">
+          <p class="message">Start guessing</p>
+          <p class="label-score">
+            💯 <span class="opportunity">opportunity</span>:
+            <span class="opportunity_num">10</span>
+          </p>
+          <p class="label-highscore">
+            🥇<span class="score"> Highscore</span> :
+            <span class="highscore">0</span>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      // Buttons
+      const againBtn = document.querySelector(".again");
+      const checkBtn = document.querySelector(".check");
+      const uzbekBtn = document.querySelector(".uzbek");
+      const englishBtn = document.querySelector(".eng");
+
+      const body = document.querySelector("body");
+      const message = document.querySelector(".message");
+      const opportunity = document.querySelector(".opportunity");
+      const score = document.querySelector(".score"); // highscore
+      const h1 = document.querySelector("h1");
+      const opportunity_num = document.querySelector(".opportunity_num");
+      const guess_num = document.querySelector(".guess_num");
+      const highscoreNum = document.querySelector(".highscore");
+      // Input
+      const inputNumber = document.querySelector(".guess");
+
+      const winAudio = new Audio("./06. Level Complete.mp3");
+      const loseAudio = new Audio("./08. Lost a Life.mp3");
+
+      ////numbersiimg
+
+      ////////////////////////
+      uzbekBtn.addEventListener("click", () => {
+        againBtn.textContent = "Takror";
+        checkBtn.textContent = "Tekshirish";
+        h1.textContent = "O'ylangan raqam ?";
+        message.textContent = "Taxmin qilishni boshlang";
+        opportunity.textContent = "Urinishlar soni";
+        score.textContent = " Yuqori natija ";
+      });
+      englishBtn.addEventListener("click", () => {
+        againBtn.textContent = "Again!";
+        checkBtn.textContent = "Check";
+        h1.textContent = "Guess My Number ?";
+        message.textContent = "Start Guessing";
+        opportunity.textContent = "opportunity";
+        score.textContent = " HighScore ";
+      });
+      let randomNumber = null;
+      let currentAttempt = 0;
+      let highscore = 10;
+
+      const random = () => {
+        randomNumber = Math.trunc(Math.random() * 20) + 1;
+        console.log(randomNumber);
+      };
+
+      random();
+
+      // Keydown hodisasi bilan "Enter" tugmasini eslash
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          handleGuess();
+        }
+      });
+
+      checkBtn.addEventListener("click", () => {
+        handleGuess();
+      });
+
+      againBtn.addEventListener("click", () => {
+        // O'yinni qayta boshlash
+        resetGame();
+      });
+
+      const handleGuess = () => {
+        const userGuess = +inputNumber.value;
+
+        if (userGuess >= 1 && userGuess <= 20) {
+          currentAttempt++;
+
+          if (randomNumber === userGuess) {
+            // Foydalanuvchi sonni topdi
+            handleWin();
+          } else if (currentAttempt >= 10) {
+            // Urinishlar soni 10 ga yetib keldi, yutqazib bo'ldi
+            handleLoss();
+          }
+        } else {
+          // Foydalanuvchi to'g'ri son kiritmadi
+          message.textContent = "Iltimos, 1 dan 20 gacha son kiriting";
+        }
+
+        // Urinish soni kamayib borsa
+        opportunity_num.textContent = Math.max(
+          0,
+          10 - currentAttempt
+        ).toString();
+      };
+
+      const handleWin = () => {
+        // Foydalanuvchi yutdi
+        guess_num.textContent = randomNumber;
+        body.style.backgroundColor = "green";
+        winAudio.play();
+
+        // Yutqazgan holatda highscore ni yangilash
+        if (currentAttempt < highscore) {
+          highscore = currentAttempt;
+          highscoreNum.textContent = highscore;
+        }
+
+        // Urinish soni kamayib borsa
+        opportunity_num.textContent = "0";
+      };
+
+      const handleLoss = () => {
+        // O'yinchi yutqazib bo'ldi
+        guess_num.textContent = randomNumber;
+        body.style.backgroundColor = "red";
+
+        // Urinish soni kamayib borsa
+        opportunity_num.textContent = "0";
+        loseAudio.play();
+      };
+
+      const resetGame = () => {
+        // O'yinni qayta boshlash
+        body.style.backgroundColor = "#222";
+        inputNumber.value = "";
+        guess_num.textContent = "?";
+        opportunity_num.textContent = "10";
+        currentAttempt = 0;
+
+        // Yangi random sonni generatsiya qilish
+        random();
+      };
+    </script>
+  </body>
+</html>
