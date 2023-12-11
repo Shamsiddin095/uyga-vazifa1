@@ -13,22 +13,106 @@
         <div class="logo">
           <h1>String medhods JS</h1>
         </div>
-        <div class="container_links">
-          <div id="col1" class="link1">
-            <a href="./index.html">String methods</a>
-          </div>
-          <div class="link2">
-            <a href="./numberm.html">Nubmer medhods</a>
-          </div>
-          <div class="link2">
-            <a href="./game.html">Game random</a>
-          </div>
-          <div class="link3">
-            <a href="input.html">About Use</a>
-          </div>
+
+        <div class="container_navbar2">
+          <input type="checkbox" id="nav-toggle" />
+          <input type="checkbox" id="nav-toggle" />
+          <label for="nav-toggle" class="open"
+            ><img id="open-icon" src="./img/menuiconopen.png" alt="img"
+          /></label>
+          <nav class="navbar">
+            <label for="nav-toggle" class="close"
+              ><img id="close-icon" src="./img/closeicon.webp" alt="img"
+            /></label>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li>
+                <a href="#">Html</a>
+                <ul>
+                  <li><a href="#">html basics</a></li>
+                  <li><a href="#">html tags</a></li>
+                  <li><a href="#">html struktura</a></li>
+                  <li><a href="#">html links</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Css</a>
+                <ul>
+                  <li><a href="#">selectors</a></li>
+                  <li><a href="#"> colors</a></li>
+                  <li><a href="#">backgrounds</a></li>
+                  <li><a href="#"> margins</a></li>
+                  <li><a href="#"> paddings</a></li>
+                  <li><a href="#"> fonts</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">JavaScript</a>
+                <ul>
+                  <li><a href="#"> operators</a></li>
+                  <li><a href="#"> variables</a></li>
+                  <li><a href="#"> data types</a></li>
+                  <li><a href="#"> Functions</a></li>
+                  <li><a href="./index.html"> String methods</a></li>
+                  <li><a href="./numberm.html"> number methods</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">React</a></li>
+              <li><a href="#">NodJS</a></li>
+              <li><a href="#">PhP</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="./game.html">Game</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sign_div">
+          <button class="btn_sign">Sign in</button>
+          <button class="btn_sign">Sign up</button>
         </div>
       </header>
+      <div class="container_navbar1">
+        <nav class="navbar1">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">Html</a>
+              <ul>
+                <li><a href="#">html basics</a></li>
+                <li><a href="#">html tags</a></li>
+                <li><a href="#">html struktura</a></li>
+                <li><a href="#">html links</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Css</a>
+              <ul>
+                <li><a href="#">selectors</a></li>
+                <li><a href="#"> colors</a></li>
+                <li><a href="#">backgrounds</a></li>
+                <li><a href="#"> margins</a></li>
+                <li><a href="#"> paddings</a></li>
+                <li><a href="#"> fonts</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">JavaScript</a>
+              <ul>
+                <li><a href="#"> operators</a></li>
+                <li><a href="#"> variables</a></li>
+                <li><a href="#"> Functions</a></li>
+                <li><a href="./index.html"> String methods</a></li>
+                <li><a href="./numberm.html"> number methods</a></li>
+              </ul>
+            </li>
 
+            <li><a href="#">React</a></li>
+            <li><a href="#">NodJS</a></li>
+            <li><a href="./game.html">Game</a></li>
+          </ul>
+        </nav>
+      </div>
       <hr />
       <main>
         <div class="content" id="content1">
@@ -36,14 +120,23 @@
           <button id="run" onclick="runFunction()">Run code</button>
         </div>
         <div class="search_container">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search..."
-            oninput="search()"
-          />
-          <img id="searchimg" src="./img/search.png" alt="img" />
+          <div class="button_div">
+            <button id="button1" onclick="toggleContent('content1')">
+              Open Terminal
+            </button>
+          </div>
+
+          <div class="input_div">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              oninput="search()"
+            />
+            <img id="searchimg" src="./img/search.png" alt="img" />
+          </div>
         </div>
+
         <div class="container">
           <!--box1---------------------->
           <div class="box">
@@ -69,9 +162,6 @@
                 Test1 id li documentimizni text degan o'zgaruvchiga olib uni
                 textga o'zlashtirib oldek, va textni length ga tekshirdek.
               </p>
-              <button id="button1" onclick="toggleContent('content1')">
-                Try it now
-              </button>
             </div>
           </div>
           <!--box2---------------------->
@@ -88,9 +178,6 @@
               </p>
               <h3 id="toUpper">Salom Javascript</h3>
               <img src="./img/string metod/2-toUpperCase.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box3---------------------->
@@ -105,9 +192,6 @@
               </p>
               <h3 id="toLower">SALOM JAVASCRIPT</h3>
               <img src="./img/string metod/3-toLowerCase.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                try it now
-              </button>
             </div>
           </div>
           <!--box4---------------------->
@@ -125,9 +209,6 @@
               </p>
               <h3 id="charAt">Salom Javascript</h3>
               <img src="./img/string metod/4-charAt.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box5---------------------->
@@ -146,9 +227,6 @@
               </p>
               <h3 id="indexOf">Salom Javascript</h3>
               <img src="./img/string metod/5-indexOf.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box6---------------------->
@@ -169,9 +247,6 @@
               </p>
               <h3 id="substring">Salom Javascript</h3>
               <img src="./img/string metod/6-substring.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box7---------------------->
@@ -193,9 +268,6 @@
               </p>
               <h3 id="slice">Salom Javascript</h3>
               <img src="img/string metod/7-slice.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box8---------------------->
@@ -214,9 +286,6 @@
               </p>
               <h3 id="replace">Salom Javascript</h3>
               <img src="./img/string metod/8-replace.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box9---------------------->
@@ -236,9 +305,6 @@
               </p>
               <h3 id="split">Salom Javascript</h3>
               <img src="./img/string metod/9-split.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box10---------------------->
@@ -259,9 +325,6 @@
               <h3 id="matn1">Javascriptga</h3>
 
               <img src="./img/string metod/10-concat.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box11---------------------->
@@ -284,9 +347,6 @@
               </p>
               <h3 id="natija"></h3>
               <img src="./img/string metod/11-match.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
 
@@ -302,9 +362,6 @@
               </p>
               <h3 id="repeat">java</h3>
               <img src="img/string metod/12-repeat.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
 
@@ -326,9 +383,6 @@
               </p>
               <h3 id="quti"></h3>
               <img src="./img/string metod/13-search.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box14---------------------->
@@ -347,9 +401,6 @@
               </p>
               <h3 id="trim"></h3>
               <img src="./img/string metod/14-trim.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box15---------------------->
@@ -368,9 +419,6 @@
               </p>
               <h3 id="padEnd">salom</h3>
               <img src="./img/string metod/15-padEnd.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box16---------------------->
@@ -389,9 +437,6 @@
               </p>
               <h3 id="padStart">salom</h3>
               <img src="./img/string metod/16-padStart.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box17---------------------->
@@ -408,9 +453,6 @@
               </p>
 
               <img src="./img//string metod/17-includes.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box18---------------------->
@@ -426,9 +468,6 @@
                 oxirida turib, natijada true qaytariladi end.
               </p>
               <img src="./img/string metod/18-endsWith.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box19---------------------->
@@ -445,9 +484,6 @@
                 natijada true qaytariladi.
               </p>
               <img src="./img/string metod/19-startsWith.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
           <!--box20---------------------->
@@ -464,9 +500,6 @@
               </p>
               <h3 id="localnatija"></h3>
               <img src="./img/string metod/20-localeCompare.png" alt="img" />
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
 
@@ -486,10 +519,6 @@
               <h3 id="toString">42</h3>
 
               <img src="./img/string metod/21-toStrinng.png" alt="img" />
-
-              <button id="button1" onclick="toggleContent('content1')">
-                Sinab ko'ring
-              </button>
             </div>
           </div>
 

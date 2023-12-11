@@ -89,6 +89,14 @@ function toggleContent(contentId) {
     content.style.display = "none";
   }
 }
+
+//////navbar
+document.getElementById("nav-toggle").addEventListener("change", function () {
+  var navbar = document.querySelector(".navbar");
+  navbar.style.left = this.checked ? "0" : "-100%";
+});
+//////////////////////////////////////////////////////////////////
+
 // 1-length
 
 // let text = document.getElementById("toleng");

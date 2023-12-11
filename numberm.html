@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Number medhodlar</title>
+    <title>Number methods</title>
   </head>
   <body>
     <div class="container_all">
@@ -13,22 +13,106 @@
         <div class="logo">
           <h1>String medhods JS</h1>
         </div>
-        <div class="container_links">
-          <div id="col1" class="link1">
-            <a href="./index.html">String methods</a>
-          </div>
-          <div class="link2">
-            <a href="./numberm.html">Nubmer medhods</a>
-          </div>
-          <div class="link2">
-            <a href="./game.html">Game </a>
-          </div>
-          <div class="link3">
-            <a href="input.html">About Use</a>
-          </div>
+
+        <div class="container_navbar2">
+          <input type="checkbox" id="nav-toggle" />
+          <input type="checkbox" id="nav-toggle" />
+          <label for="nav-toggle" class="open"
+            ><img id="open-icon" src="./img/menuiconopen.png" alt="img"
+          /></label>
+          <nav class="navbar">
+            <label for="nav-toggle" class="close"
+              ><img id="close-icon" src="./img/closeicon.webp" alt="img"
+            /></label>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li>
+                <a href="#">Html</a>
+                <ul>
+                  <li><a href="#">html basics</a></li>
+                  <li><a href="#">html tags</a></li>
+                  <li><a href="#">html struktura</a></li>
+                  <li><a href="#">html links</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Css</a>
+                <ul>
+                  <li><a href="#">selectors</a></li>
+                  <li><a href="#"> colors</a></li>
+                  <li><a href="#">backgrounds</a></li>
+                  <li><a href="#"> margins</a></li>
+                  <li><a href="#"> paddings</a></li>
+                  <li><a href="#"> fonts</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">JavaScript</a>
+                <ul>
+                  <li><a href="#"> operators</a></li>
+                  <li><a href="#"> variables</a></li>
+                  <li><a href="#"> data types</a></li>
+                  <li><a href="#"> Functions</a></li>
+                  <li><a href="./index.html"> String methods</a></li>
+                  <li><a href="./numberm.html"> number methods</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">React</a></li>
+              <li><a href="#">NodJS</a></li>
+              <li><a href="#">PhP</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="./game.html">Game</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sign_div">
+          <button class="btn_sign">Sign in</button>
+          <button class="btn_sign">Sign up</button>
         </div>
       </header>
+      <div class="container_navbar1">
+        <nav class="navbar1">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">Html</a>
+              <ul>
+                <li><a href="#">html basics</a></li>
+                <li><a href="#">html tags</a></li>
+                <li><a href="#">html struktura</a></li>
+                <li><a href="#">html links</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Css</a>
+              <ul>
+                <li><a href="#">selectors</a></li>
+                <li><a href="#"> colors</a></li>
+                <li><a href="#">backgrounds</a></li>
+                <li><a href="#"> margins</a></li>
+                <li><a href="#"> paddings</a></li>
+                <li><a href="#"> fonts</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">JavaScript</a>
+              <ul>
+                <li><a href="#"> operators</a></li>
+                <li><a href="#"> variables</a></li>
+                <li><a href="#"> Functions</a></li>
+                <li><a href="./index.html"> String methods</a></li>
+                <li><a href="./numberm.html"> number methods</a></li>
+              </ul>
+            </li>
 
+            <li><a href="#">React</a></li>
+            <li><a href="#">NodJS</a></li>
+            <li><a href="./game.html">Game</a></li>
+          </ul>
+        </nav>
+      </div>
       <hr />
       <main>
         <div class="content" id="content1">
@@ -36,16 +120,24 @@
           <button id="run" onclick="runFunction()">Run code</button>
         </div>
         <div class="search_container">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search..."
-            oninput="search()"
-          />
-          <img id="searchimg" src="./img/search.png" alt="img" />
+          <div class="button_div">
+            <button id="button1" onclick="toggleContent('content1')">
+              Open Terminal
+            </button>
+          </div>
+
+          <div class="input_div">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              oninput="search()"
+            />
+            <img id="searchimg" src="./img/search.png" alt="img" />
+          </div>
         </div>
+
         <div class="container">
-          <!--box1---------------------->
           <div class="box">
             <div class="title">
               <h1>MAX-VALUE, MIN-VALUE</h1>
@@ -83,9 +175,6 @@
                 Agar bu belgi bo'lmasa, birinchi mos kelgan joyda qidirishni
                 to'xtatib qo'yadi.
               </p>
-              <button id="button1" onclick="toggleContent('content1')">
-                try it now
-              </button>
             </div>
           </div>
           <!--box2---------------------->
@@ -109,10 +198,6 @@
                 src="./img/2-number metods/2-isFinite.png"
                 alt="img"
               />
-
-              <button id="button1" onclick="toggleContent('content1')">
-                try it now
-              </button>
             </div>
           </div>
           <!--box3---------------------->
@@ -134,12 +219,9 @@
                 src="./img/2-number metods/2-isFinite.png"
                 alt="img"
               />
-
-              <button id="button1" onclick="toggleContent('content1')">
-                try it now
-              </button>
             </div>
           </div>
+
           <!--close box-->
         </div>
       </main>
