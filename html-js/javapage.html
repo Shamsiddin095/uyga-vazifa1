@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>string medhodlar</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>javascriptpage</title>
   </head>
   <body>
     <div class="container_all">
-      <div class="banner_header"></div>
-      <header>
-        <div class="logo">
-          <h1>Web_Dev.uz</h1>
-        </div>
+      <div class="banner_header">
         <video
           autoplay
           muted
@@ -21,6 +17,11 @@
           src="./klip/Sale Header Banner Template Nature Sky Ad - Made with PosterMyWall.mp4"
           type="video/mp4"
         ></video>
+      </div>
+      <header>
+        <div class="logo">
+          <h1>Web_Dev.uz</h1>
+        </div>
         <div class="sign_div">
           <button class="btn_sign">Sign in</button>
           <button class="btn_sign">Sign up</button>
@@ -34,7 +35,7 @@
                 <ul>
                   <li><a href="#">Html</a></li>
                   <li><a href="#">Css</a></li>
-                  <li><a href="./html-js/javapage.html">Java script</a></li>
+                  <li><a href="#">Java script</a></li>
                   <li><a href="#">React</a></li>
                   <li><a href="#">NodJs</a></li>
                   <li><a href="#">Riacnitive</a></li>
@@ -51,7 +52,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#">Hit </a>
+                <a href="#">Hit mp3</a>
                 <ul>
                   <li><a href="#">Uzbek</a></li>
                   <li><a href="#">Evro</a></li>
@@ -135,6 +136,7 @@
           </nav>
         </div>
       </header>
+
       <div class="search_container">
         <input
           type="text"
@@ -144,9 +146,19 @@
         />
         <img id="searchimg" src="./img/search.png" alt="img" />
       </div>
+
       <main>
         <div class="sidebar">
-          <div class="sidebar_link" id="sidebarLinks">
+          <div class="search_container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              oninput="search()"
+            />
+            <img id="searchimg" src="./img/search.png" alt="img" />
+          </div>
+          <div class="sidebar_link">
             <a class="link" href="#">Data types</a>
             <a class="link" href="#">Operators</a>
             <a class="link" href="#">Functions</a>
@@ -488,7 +500,7 @@
             <div class="box">
               <div class="title">
                 <h1>includes</h1>
-                <p>
+                <p id="includes">
                   includes xususiyati,jav string obyektlarida berilgan
                   searchString ni qidirib topish uchun foydalaniladi. Agar
                   searchString matnda topilsa, true qaytariladi; aks holda,
@@ -496,7 +508,7 @@
                   qolganini tekshiramiz. Agar mavjud bo'lsa true chiqadi aksi
                   bo'lsa false
                 </p>
-                <h3 id="includes">salom java script jav</h3>
+
                 <img src="./img//string metod/17-includes.png" alt="img" />
               </div>
             </div>
@@ -589,6 +601,6 @@
       </footer>
     </div>
 
-    <script src="./js/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

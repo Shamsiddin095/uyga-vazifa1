@@ -81,12 +81,16 @@ function runFunction() {
 ///conent none block qilish
 
 function toggleContent(contentId) {
-  let content = document.getElementById("content1");
+  let content = document.getElementById(contentId);
 
-  if (content.style.display === "none") {
-    content.style.display = "block";
+  if (content.classList.contains("show")) {
+    content.style.opacity = 0;
+    content.style.height = 0;
+    content.classList.remove("show");
   } else {
-    content.style.display = "none";
+    content.style.opacity = 1;
+    content.style.height = "250px";
+    content.classList.add("show");
   }
 }
 
@@ -103,7 +107,7 @@ document.getElementById("nav-toggle").addEventListener("change", function () {
 // alert(text.innerText.length);
 // console.log(text.innerText.length);
 
-//2- to UpperCase
+// 2- to UpperCase
 // let text = document.getElementById("toUpper");
 // let kattaharflar = text.innerText.toLocaleUpperCase();
 // //natijani o'zlashtirish
