@@ -11,15 +11,12 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: url(../img/body.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 .container_all {
-  max-width: 1640px;
+  max-width: 1920px;
   margin: 10px auto;
   height: auto;
 }
@@ -47,7 +44,6 @@ video {
 }
 .logo h1 {
   color: rgb(0, 0, 0);
-
   font-size: 20px;
 }
 .sign_div {
@@ -308,16 +304,58 @@ main {
   height: 1200px;
 }
 
+.taskdiv {
+  position: absolute;
+  display: none;
+  width: 60%;
+  background: white;
+  box-shadow: 0 5px 10px grey;
+  right: 20px;
+  top: 50px;
+  padding: 30px;
+  z-index: 2;
+}
+#col {
+  background: green;
+}
+
+#alert {
+  color: rgb(219, 14, 14);
+}
+#task-p {
+  background: rgb(31, 31, 30);
+  font-size: 24px;
+  color: white;
+}
+#natija {
+  color: grey;
+}
+#matn {
+  color: green;
+}
+#let {
+  color: blue;
+}
+.task-btn {
+  width: 100px;
+  height: 30px;
+  box-shadow: 0 5px 10px grey;
+  color: rgb(12, 11, 11);
+  font-size: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
 .title {
   display: flex;
   flex-direction: column;
 }
 .title h1 {
-  background: green;
   width: 200px;
   text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 25px;
+  color: rgb(43, 7, 3);
+  text-align: justify;
   margin-bottom: 20px;
 }
 .title h3 {
@@ -338,13 +376,14 @@ main {
   padding: 10px;
   font-size: 18px;
   color: rgb(0, 0, 0);
-  font-weight: bold;
   text-align: justify;
+  max-width: 90%;
 }
 
 .box {
   border: 1px solid #ddd;
   padding: 20px;
+  position: relative;
 }
 #button1 {
   position: absolute;
@@ -482,6 +521,13 @@ footer {
   input {
     width: 70%;
   }
+  .taskdiv {
+    width: 70%;
+    top: 55px;
+  }
+  #task-p {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 500px) {
   input {
@@ -558,6 +604,19 @@ footer {
   .link3 a {
     color: white;
   }
+  #task-p {
+    font-size: 12px;
+  }
+  .taskdiv {
+    width: 80%;
+    top: 100px;
+  }
 }
 @media only screen and (max-width: 395px) {
+  #task-p {
+    font-size: 12px;
+  }
+  .taskdiv {
+    width: 80%;
+  }
 }

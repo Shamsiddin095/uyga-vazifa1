@@ -99,7 +99,19 @@ document.getElementById("nav-toggle").addEventListener("change", function () {
   var navbar = document.querySelector(".navbar");
   navbar.style.left = this.checked ? "0" : "-100%";
 });
-//////////////////////////////////////////////////////////////////
+
+// task div block none
+function toggleTask(taskDivId) {
+  let taskDiv = document.getElementById(taskDivId);
+  if (taskDiv.style.display === "none" || taskDiv.style.display === "") {
+    taskDiv.style.display = "block";
+  } else {
+    taskDiv.style.display = "none";
+  }
+}
+
+// Hodisalar eshitilganda ishga tushirish uchun funksiyani chaqirish
+task();
 
 // 1-length
 
@@ -179,13 +191,13 @@ document.getElementById("nav-toggle").addEventListener("change", function () {
 // text.innerText = natija;
 
 //13 - search
+alert("salom");
 
-// let text = document.getElementById("srch");
-// let natijaqutisi = document.getElementById("quti");
+// let text = "Salom, dunyo! Salom, JavaScript!";
+// let substring = "JavaScript";
+// let result = text.search(substring);
 
-// let natija = text.innerText.search(/meni top/);
-
-// natijaqutisi.innerText = natija !== -1 ? natija.toString() : "Natija topilmadi";
+// console.log(result);
 
 //14 trim
 
@@ -217,11 +229,11 @@ document.getElementById("nav-toggle").addEventListener("change", function () {
 // text.innerText = natija;
 
 //18-endsWith
-// let matn = document.getElementById("endsWith");
+// let matn = "salom dunoy  ";
 // let text = matn.innerText.trim(); // Matndan bo'sh joylarni olib tashlash
 // let natija = text.endsWith("end.");
 
-// matn.innerText = natija;
+// alert(natija);
 
 //19-startsWith
 // let matn = document.getElementById("startsWith");
@@ -290,3 +302,9 @@ document.getElementById("nav-toggle").addEventListener("change", function () {
 
 // natija.innerText = `natija =  ${int}`;
 // console.log(`${son}  ${int}`);
+// const arr2 = arr.filter((e) => {
+//   if (e % 2 == 0) {
+//     return e + 1;
+//   }
+// });
+// console.log(arr2);

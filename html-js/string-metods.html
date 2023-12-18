@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Index</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>string medhodlar</title>
   </head>
   <body>
     <div class="container_all">
@@ -18,7 +18,7 @@
           autoplay
           muted
           loop
-          src="./klip/Sale Header Banner Template Nature Sky Ad - Made with PosterMyWall.mp4"
+          src="../klip/Sale Header Banner Template Nature Sky Ad - Made with PosterMyWall.mp4"
           type="video/mp4"
         ></video>
         <div class="sign_div">
@@ -84,12 +84,12 @@
           <label for="nav-toggle" class="open"
             ><img
               id="open-icon"
-              src="./img/menuiconopen-removebg-preview.png"
+              src="../img/menuiconopen-removebg-preview.png"
               alt="img"
           /></label>
           <nav class="navbar">
             <label for="nav-toggle" class="close"
-              ><img id="close-icon" src="./img/closeicon.webp" alt="img"
+              ><img id="close-icon" src="../img/closeicon.webp" alt="img"
             /></label>
             <ul>
               <li><a href="#">Home</a></li>
@@ -120,7 +120,7 @@
                   <li><a href="#"> variables</a></li>
                   <li><a href="#"> data types</a></li>
                   <li><a href="#"> Functions</a></li>
-                  <li><a href="./index.html"> String methods</a></li>
+                  <li><a href="./string-metods.html"> String methods</a></li>
                   <li><a href="./numberm.html"> number methods</a></li>
                 </ul>
               </li>
@@ -142,7 +142,7 @@
           placeholder="Search..."
           oninput="search()"
         />
-        <img id="searchimg" src="./img/search.png" alt="img" />
+        <img id="searchimg" src="../img/search.png" alt="img" />
       </div>
       <main>
         <div class="sidebar">
@@ -151,13 +151,11 @@
             <a class="link" href="#">Operators</a>
             <a class="link" href="#">Functions</a>
             <a class="link" href="#">Strings</a>
-            <a class="link" href="./html-js/string-metods.html"
-              >String Medhods</a
-            >
+            <a class="link" id="col" href="#">String Medhods</a>
             <a class="link" href="#">Numbers</a>
             <a class="link" href="#">Number Medhods</a>
             <a class="link" href="#">Arrays</a>
-            <a class="link" href="#">Array Medhods</a>
+            <a class="link" href="./arraymetod.html">Array Medhods</a>
             <a class="link" href="#">Array sort</a>
             <a class="link" href="#">Array iteration</a>
             <a class="link" href="#">Dates</a>
@@ -178,7 +176,7 @@
             ></div>
             <button id="run" onclick="runFunction()">Run code</button>
             <button id="button12" onclick="toggleContent('content1')">
-              <img id="close-icon" src="./img/closeicon.webp" alt="img" />
+              <img id="close-icon" src="../img/closeicon.webp" alt="img" />
             </button>
           </div>
           <button id="button1" onclick="toggleContent('content1')">
@@ -216,6 +214,7 @@
                     <span id="matn">"salom"</span>; <br />
                     <span id="let">let</span> result = text.length; <br />
                     <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: 5</span>
                   </p>
                 </div>
               </div>
@@ -246,6 +245,7 @@
                     <span id="let">let</span> result = text.toUpperCase();
                     <br />
                     <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: SALOM</span>
                   </p>
                 </div>
               </div>
@@ -260,10 +260,23 @@
                   o'tkaziladi. Shunday qilib, "Salom, JavaScript!" matni "salom,
                   javascript!" ga o'tkaziladi.
                 </p>
-                <!-- <button id="task-btn2" onclick="toggleTask('taskdiv2')">
-                  2-misolni ishlang
+                <button
+                  id="task-btn3"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv3')"
+                >
+                  Try it now
                 </button>
-                <div id="taskdiv2" class="taskdiv">salom2</div> -->
+                <div id="taskdiv3" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"SALOM"</span>; <br />
+                    <span id="let">let</span> result = text.toLowerCase();
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: salom</span>
+                  </p>
+                </div>
               </div>
             </div>
             <!--box4---------------------->
@@ -279,15 +292,22 @@
                   olinadi. Shunday qilib, "Salom, JavaScript!" matnining
                   birinchi harfi "S" ga o'tadi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn4"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv4')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv4" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom"</span>; <br />
+                    <span id="let">let</span> result = text.charAt(0);
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: s</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -306,15 +326,23 @@
                   matni ichida "JavaScript" submatni boshlang'ich indeksi 7 ga
                   teng.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn5"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv5')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv5" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>; <br />
+                    <span id="let">let</span> result =
+                    text.indexOf("javascript");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: 6</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -335,15 +363,22 @@
                   belgilar qisqacha matnda "Java" bo'lib chiqadi. <br />matnni
                   boshidan qirqib olish (0 dan 2 gacha .....)
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn6"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv6')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv6" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>; <br />
+                    <span id="let">let</span> result = text.substring(6,10);
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: java</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -364,15 +399,22 @@
                   belgilar qisqacha matnda "Java" bo'lib chiqadi. <br />
                   matnni orqadan qirqib keladi. ()
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn7"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv7')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv7" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>; <br />
+                    <span id="let">let</span> result = text.substring(6,10);
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: java</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -390,15 +432,23 @@
                   bilan almashtiramiz. Shunday qilib, "Salom, JavaScript!" matni
                   "Salom, Dunyo!" ga o'zgaradi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn8"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv8')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv8" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>; <br />
+                    <span id="let">let</span> result =
+                    text.replace("javascript", "dunyo!");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: salom dunyo!</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -417,15 +467,24 @@
                   Shunday qilib, "Salom, JavaScript!" matni ["Salom",
                   "JavaScript!"] massivga aylanadi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn9"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv9')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv9" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>; <br />
+                    <span id="let">let</span> result = text.split("");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija"
+                      >//natija: s,a,l,o,m, ,j,a,v,a,s,c,r,i,p,t</span
+                    >
+                  </p>
                 </div>
               </div>
             </div>
@@ -443,15 +502,24 @@
                   natijasida yangi bir matn hosil bo'ladi. Shunday qilib, yangi
                   matn "Salom, JavaScript!" ga o'zgaradi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn10"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv10')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv10" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text1 =
+                    <span id="matn">"salom"</span>; <br />
+                    <span id="let">let</span> text2 =
+                    <span id="matn">"javascript"</span>; <br />
+                    <span id="let">let</span> result = text1.concat(text2);
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: salom javascript</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -459,7 +527,7 @@
             <div class="box">
               <div class="title">
                 <h1>match</h1>
-                <p id="matn">
+                <p>
                   match xususiyati, bir stringni berilgan regular ifoda (regexp)
                   ve (regex) boyicha qidirish uchun ishlatiladi. Bu xususiyat
                   matn ichida topilgan belgilar yoki qatorlarni ro'yxat shaklida
@@ -473,15 +541,25 @@
                   javascript ga o'xshaydi.pastdagi misolni tekshirib ko'ring
                   ushbu matnda nechta javascript so'zi ishlatilgan
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn11"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv11')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv11" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript salom dunyo!"</span>;
+                    <br />
+                    <span id="let">let</span> regex =
+                    <span id="matn">/salom/g;</span> <br />
+                    <span id="let">let</span> result = text.match(regex);
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: ["salom, salom ]</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -496,15 +574,25 @@
                   olingan matnni berilgan sanaga qadar qaytaradi. <br />
                   bu misolda java so'zi 3 marta takrorlanadi
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn12"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv12')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv12" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript salom dunyo!"</span>;
+                    <br />
+                    <span id="let">let</span> words = text.split
+                    <span id="matn">(' ')</span> <br />
+                    <span id="let">let</span> result = words[0].repeat(3);
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: ["salom, salom ,salom ]</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -513,28 +601,36 @@
             <div class="box">
               <div class="title">
                 <h1>search</h1>
-                <p id="srch">
+                <p>
                   search xususiyati, string obyektlarida berilgan regular
-                  ifodani (regexp) qidirib topish uchun foydalaniladi. "meni top
-                  men 110-indexdan boshlanaman". Agar topilgan bo'lsa, eng
-                  birinchi topilgan indeksni qaytaradi. Aks holda, -1 ni
-                  qaytaradi. Pastdagi misolda, search xususiyati orqali "Java"
-                  so'zi matn ichida qidiriladi. Agar topilgan bo'lsa, eng
-                  birinchi topilgan indeksi qaytaradi. Shunday qilib, "Salom,
-                  JavaScript!" matni ichida manashu "Java" so'zi "7" indeksdan
-                  boshlanadi.Endi keling shu matn ichida java so'zi qaysi
-                  indexdan boshlanadi pastdagi misolni ishlab tekshirib
+                  ifodani (regexp) qidirib topish uchun foydalaniladi. . Agar
+                  topilgan bo'lsa, eng birinchi topilgan indeksni qaytaradi. Aks
+                  holda, -1 ni qaytaradi. Pastdagi misolda, search xususiyati
+                  orqali "Java" so'zi matn ichida qidiriladi. Agar topilgan
+                  bo'lsa, eng birinchi topilgan indeksi qaytaradi. Shunday
+                  qilib, "Salom, JavaScript!" matni ichida manashu "Java" so'zi
+                  "7" indeksdan boshlanadi.Endi keling shu matn ichida java
+                  so'zi qaysi indexdan boshlanadi misolni ishlab tekshirib
                   ko'ramiz.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn13"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv13')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv13" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.rearch("script");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: 10</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -552,15 +648,34 @@
                   tashlanadi. Natijada yangi matn "Salom, JavaScript!" ga
                   o'zgaradi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn14"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv14')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv14" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">" salom javascript "</span>;
+                    <br />
+                    <span id="alert"> console.log</span>(text); <br />
+                    <span id="let">let</span> result = text.trim();
+                    <br />
+                    <span id="alert"> console.log</span>(result);
+                    <span id="natija">//natija:"salom javascript"</span>
+                  </p>
+                  <p>
+                    birinchi holatda console logni oching va textni sichqoncha
+                    bilan blockga oling undagi bo'sh joyni ko'ring rasmdagidek
+                  </p>
+                  <img src="../img/string metod/trim 1-xolat.png" alt="img" />
+                  <br />
+                  result natijadan keyin trim qilingandan keyin bo'shliq
+                  yo'qoldi rasmga qarang text orqasidagi ko'k rang textni
+                  uzunligiga teng holatda
+                  <img src="../img/string metod/trim 2-xolat.png" alt="img" />
                 </div>
               </div>
             </div>
@@ -578,15 +693,24 @@
                   belgilangan hajmga (10) yettiriladi va oxiriga "!"" belgisi
                   qo'shiladi. Natijada yangi matn "Salom!!!!!" ga o'zgaradi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn15"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv15')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv15" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.padEnd(10,"!");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: salom!!!!!</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -604,15 +728,24 @@
                   belgilangan hajmga (10) yettiriladi va boshiga "!"" belgisi
                   qo'shiladi. Natijada yangi matn "!!!!Salom" ga o'zgaradi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn16"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv16')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv16" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.padStart(10,"!");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: !!!!!salom</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -628,15 +761,24 @@
                   qolganini tekshiramiz. Agar mavjud bo'lsa true chiqadi aksi
                   bo'lsa false
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn17"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv17')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv17" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript salom script"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.includes("script");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: true</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -654,15 +796,24 @@
                   end.
                 </p>
 
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn18"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv18')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv18" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.endsWith("t");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: true</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -679,15 +830,24 @@
                   JavaScript!" matni ichida "Salom" so'zi boshidan boshlanadi,
                   natijada true qaytariladi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn19"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv19')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv19" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.startsWith("s");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: true</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -703,15 +863,24 @@
                   -1 qaytariladi; agar ikkala matn bir xil bo'lsa, 0
                   qaytariladi; aks holda, 1 qaytariladi.
                 </p>
-                <div class="task-exm">
-                  <button
-                    id="task-btn2"
-                    class="task-btn"
-                    onclick="toggleTask('taskdiv2')"
-                  >
-                    Try it now
-                  </button>
-                  <div id="taskdiv2" class="taskdiv">salom1</div>
+                <button
+                  id="task-btn19"
+                  class="task-btn"
+                  onclick="toggleTask('taskdiv19')"
+                >
+                  Try it now
+                </button>
+                <div id="taskdiv19" class="taskdiv">
+                  <p id="task-p">
+                    <span id="let">let</span> text =
+                    <span id="matn">"salom javascript"</span>;
+                    <br />
+
+                    <span id="let">let</span> result = text.startsWith("s");
+                    <br />
+                    <span id="alert"> alert</span>(result);
+                    <span id="natija">//natija: true</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -754,6 +923,6 @@
       </footer>
     </div>
 
-    <script src="./js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
